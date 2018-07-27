@@ -14,7 +14,7 @@ io.on('connection', (socket) => {
         socket.user_name = user_name;
     });
     socket.on('send_message', (message) => {
-        io.emit('receiver_message', {data: socket.user_name + "(" + socket.id + "): " + message});
+        io.emit('receiver_message', socket.user_name + "(" + socket.id + "): " + message);
     });
 });
 
