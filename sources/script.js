@@ -4,7 +4,7 @@ var socket = io();
 
 socket.emit('user_login', user_name || "No name");
 
-socket.on('receiver_message', (text) => {
+socket.on('receive_message', (text) => {
     showMessage(text,'left');
 });
 
